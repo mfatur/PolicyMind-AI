@@ -8,3 +8,4 @@ openai
 matplotlib
 fastapi 
 uvicorn
+pytest
