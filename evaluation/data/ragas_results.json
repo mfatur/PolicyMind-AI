@@ -1,0 +1,42 @@
+{
+  "1": {
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.9173919291549305,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "2": {
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.9864147202492038,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "3": {
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.8895992685378958,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "_summary": {
+    "Faithfulness": {
+      "average": 1.0,
+      "completed": 3,
+      "total": 3
+    },
+    "Answer Relevancy": {
+      "average": 0.9311353059806767,
+      "completed": 3,
+      "total": 3
+    },
+    "Context Precision": {
+      "average": 0.9999999999,
+      "completed": 3,
+      "total": 3
+    },
+    "Context Recall": {
+      "average": 1.0,
+      "completed": 3,
+      "total": 3
+    }
+  }
+}

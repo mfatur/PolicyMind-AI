@@ -1,0 +1,22 @@
+KEBIJAKAN KERJA REMOTE
+Perusahaan: XYZ Tech
+Versi: 1.0
+Status: Data sintetis untuk latihan PolicyMind AI
+
+1. Ketentuan Kerja Remote
+Kerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.
+
+2. Persetujuan
+Karyawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.
+
+3. Ketersediaan
+Karyawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.
+
+4. Keamanan Data
+Karyawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.
+
+5. Perangkat Kerja
+Karyawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.
+
+6. Ketentuan Data
+Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.

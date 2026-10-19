@@ -1,0 +1,10 @@
+langchain-text-splitters
+sentence-transformers
+chromadb
+groq
+python-dotenv
+ragas
+openai
+matplotlib
+fastapi 
+uvicorn

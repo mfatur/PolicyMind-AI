@@ -1,0 +1,384 @@
+{
+  "1": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak **12 hari kerja** untuk setiap tahun kerja.",
+    "contexts": [
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.9160814507167796,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "2": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, **setiap karyawan tetap yang telah bekerja selama 12 bulan** berhak mendapatkan cuti tahunan.",
+    "contexts": [
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.44435361419602043,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "3": {
+    "answer": "Berdasarkan dokumen kebijakan cuti yang diberikan, karyawan wajib mengajukan cuti melalui sistem HR paling lambat **3 hari kerja** sebelum tanggal cuti yang direncanakan.",
+    "contexts": [
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.7113756245137678,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "4": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan dapat memeriksa sisa cuti tahunan melalui **sistem HR**.\n\nHal ini tercantum dalam poin 4 (Sisa Cuti) pada sumber `kebijakan_cuti.txt`, yang menyatakan: \"Sisa cuti tahunan dapat diperiksa melalui sistem HR.\"",
+    "contexts": [
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+      "4. Keterlambatan\nKaryawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR.\n\n5. Koreksi Kehadiran\nJika terjadi kesalahan pencatatan kehadiran, karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai."
+    ],
+    "Faithfulness": 0.5,
+    "Answer Relevancy": 0.7763738683739302,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "5": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan menjalani jam kerja reguler pada hari **Senin sampai Jumat**.",
+    "contexts": [
+      "KEBIJAKAN JAM KERJA DAN KEHADIRAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Jam Kerja\nJam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB.\n\n2. Waktu Istirahat\nKaryawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.\n\n3. Pencatatan Kehadiran\nKaryawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.9301829659296593,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "6": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan mendapatkan waktu istirahat selama **60 menit** setiap hari kerja. Waktu istirahat ini tidak termasuk dalam jam kerja efektif.",
+    "contexts": [
+      "KEBIJAKAN JAM KERJA DAN KEHADIRAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Jam Kerja\nJam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB.\n\n2. Waktu Istirahat\nKaryawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.\n\n3. Pencatatan Kehadiran\nKaryawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.9864147202492038,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "7": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan wajib mencatat waktu masuk dan waktu pulang melalui **sistem kehadiran perusahaan**.\n\nSelain itu, jika terjadi keterlambatan, karyawan juga wajib memberikan keterangan melalui sistem kehadiran tersebut.",
+    "contexts": [
+      "4. Keterlambatan\nKaryawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR.\n\n5. Koreksi Kehadiran\nJika terjadi kesalahan pencatatan kehadiran, karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai.",
+      "KEBIJAKAN JAM KERJA DAN KEHADIRAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Jam Kerja\nJam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB.\n\n2. Waktu Istirahat\nKaryawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.\n\n3. Pencatatan Kehadiran\nKaryawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.6537145703025499,
+    "Context Precision": 0.49999999995,
+    "Context Recall": 1.0
+  },
+  "8": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, jika karyawan terlambat, mereka **wajib memberikan keterangan melalui sistem kehadiran**.\n\nSelain itu, penanganan keterlambatan akan mengikuti prosedur internal yang ditetapkan oleh HR.",
+    "contexts": [
+      "4. Keterlambatan\nKaryawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR.\n\n5. Koreksi Kehadiran\nJika terjadi kesalahan pencatatan kehadiran, karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai.",
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.8977112713999608,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "9": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, **reimbursement** adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\nBiaya yang dapat diajukan meliputi biaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja, dengan syarat berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.",
+    "contexts": [
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.",
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.7647138907785274,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "10": {
+    "answer": "Berdasarkan dokumen kebijakan reimbursement yang diberikan, biaya yang dapat diajukan untuk reimbursement adalah:\n\n1. Biaya transportasi\n2. Akomodasi perjalanan dinas\n3. Pembelian kebutuhan kerja\n\nSyaratnya adalah biaya tersebut harus berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal perusahaan.",
+    "contexts": [
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.",
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.8521853785070168,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "11": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, setiap pengajuan reimbursement wajib dilengkapi dengan **bukti transaksi yang valid**, seperti **kuitansi** atau **struk pembayaran**.",
+    "contexts": [
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.7123061010419626,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "12": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan wajib mengajukan reimbursement paling lambat **30 hari kalender** sejak tanggal transaksi.",
+    "contexts": [
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.",
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.8021122349542681,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "13": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, jika pengajuan reimbursement tidak memiliki bukti transaksi, maka pengajuan tersebut **dapat dikembalikan kepada karyawan untuk dilengkapi**.\n\nHal ini tercantum dalam poin 6 (Pengajuan Tidak Lengkap) yang menyatakan bahwa pengajuan yang tidak memiliki bukti transaksi atau informasi yang diperlukan dapat dikembalikan agar dilengkapi.",
+    "contexts": [
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+      "6. Pengajuan Tidak Lengkap\nPengajuan yang tidak memiliki bukti transaksi atau informasi yang diperlukan dapat dikembalikan kepada karyawan untuk dilengkapi.\n\n7. Ketentuan Data\nDokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.893165191612614,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "14": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, kerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.",
+    "contexts": [
+      "KEBIJAKAN KERJA REMOTE\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Ketentuan Kerja Remote\nKerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.\n\n2. Persetujuan\nKaryawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.9178055800378931,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "15": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan **tidak boleh** langsung bekerja remote tanpa persetujuan.\n\nPada bagian **2. Persetujuan** dalam *kebijakan_remote.txt*, secara tegas disebutkan bahwa:\n> \"Karyawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.\"\n\nJadi, persetujuan dari atasan langsung adalah syarat wajib sebelum karyawan dapat mulai bekerja secara remote.",
+    "contexts": [
+      "KEBIJAKAN KERJA REMOTE\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Ketentuan Kerja Remote\nKerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.\n\n2. Persetujuan\nKaryawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.985558865998033,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "16": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, kewajiban karyawan terkait komunikasi saat bekerja remote adalah:\n\n1. **Wajib tetap dapat dihubungi** selama jam kerja.\n2. **Wajib menghadiri rapat** yang diwajibkan oleh tim.\n\nKetentuan ini tercantum dalam bagian \"3. Ketersediaan\" pada dokumen `kebijakan_remote.txt`.",
+    "contexts": [
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "KEBIJAKAN KERJA REMOTE\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Ketentuan Kerja Remote\nKerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.\n\n2. Persetujuan\nKaryawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.",
+      "KEBIJAKAN TUNJANGAN KARYAWAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Tunjangan Transportasi\nKaryawan yang memenuhi kriteria internal perusahaan dapat menerima tunjangan transportasi sesuai ketentuan yang ditetapkan oleh HR.\n\n2. Tunjangan Komunikasi\nKaryawan yang pekerjaannya membutuhkan komunikasi intensif dapat memperoleh tunjangan komunikasi berdasarkan persetujuan atasan dan ketentuan internal perusahaan."
+    ],
+    "Faithfulness": 0.75,
+    "Answer Relevancy": 0.9281090896993965,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "17": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan harus menjaga keamanan data saat bekerja remote dengan cara:\n\n1. **Menjaga kerahasiaan informasi perusahaan** ketika bekerja dari luar kantor.\n2. **Tidak membagikan dokumen dan data perusahaan** kepada pihak yang tidak berwenang.\n3. **Menggunakan perangkat dan aplikasi** yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+    "contexts": [
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "KEBIJAKAN KERJA REMOTE\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Ketentuan Kerja Remote\nKerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.\n\n2. Persetujuan\nKaryawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.8994111108823587,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "18": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, karyawan wajib menggunakan **perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan** untuk mengakses informasi perusahaan.\n\nHal ini tercantum dalam poin 5 (Perangkat Kerja) dari sumber `kebijakan_remote.txt`.",
+    "contexts": [
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR.",
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal."
+    ],
+    "Faithfulness": 0.6666666666666666,
+    "Answer Relevancy": 0.7808536800107339,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "19": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, berikut adalah ketentuan utama yang harus dipenuhi untuk mengambil cuti tahunan:\n\n1.  **Syarat Kelayakan:**\n    *   Karyawan harus berstatus **karyawan tetap**.\n    *   Karyawan harus telah bekerja selama **12 bulan**.\n    *   Hak cuti yang diberikan adalah **12 hari kerja** untuk setiap tahun kerja.\n\n2.  **Prosedur Pengajuan:**\n    *   Pengajuan cuti wajib dilakukan melalui **sistem HR**.\n    *   Pengajuan harus dilakukan **paling lambat 3 hari kerja** sebelum tanggal cuti yang direncanakan.\n\n3.  **Persetujuan:**\n    *   Pengajuan cuti harus mendapatkan **persetujuan dari atasan langsung** sebelum karyawan mengambil cuti.\n\n4.  **Pencatatan:**\n    *   Sisa cuti dihitung berdasarkan data cuti yang **telah disetujui dan dicatat oleh HR** di dalam sistem.\n\n*Catatan: Dokumen ini merupakan data sintetis untuk pembelajaran dan pengujian sistem AI, bukan kebijakan perusahaan nyata.*",
+    "contexts": [
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.669787420339957,
+    "Context Precision": 0.49999999995,
+    "Context Recall": 1.0
+  },
+  "20": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, berikut adalah syarat agar biaya dapat diganti melalui reimbursement:\n\n1. **Keterkaitan dengan Pekerjaan**: Biaya tersebut harus berkaitan dengan keperluan pekerjaan.\n2. **Persetujuan Internal**: Biaya harus telah memperoleh persetujuan sesuai prosedur internal perusahaan.\n3. **Jenis Biaya yang Diakui**: Biaya yang dapat diajukan meliputi:\n   *   Biaya transportasi.\n   *   Akomodasi perjalanan dinas.\n   *   Pembelian kebutuhan kerja.\n4. **Bukti Transaksi Valid**: Setiap pengajuan wajib dilengkapi dengan bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n5. **Batas Waktu Pengajuan**: Pengajuan harus dilakukan paling lambat **30 hari kalender** sejak tanggal transaksi.\n6. **Proses Verifikasi**: Pengajuan akan diperiksa oleh tim terkait dan penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+    "contexts": [
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.",
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.9999999999999488,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "21": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, berikut adalah hal-hal yang perlu diperhatikan karyawan ketika bekerja remote agar sesuai dengan kebijakan perusahaan:\n\n1. **Persetujuan Atasan**\n   Karyawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.\n\n2. **Ketersediaan**\n   Karyawan wajib tetap dapat dihubungi selama jam kerja dan harus menghadiri rapat yang diwajibkan oleh tim.\n\n3. **Keamanan Data**\n   Karyawan wajib menjaga kerahasiaan informasi perusahaan. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n4. **Perangkat Kerja**\n   Karyawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+    "contexts": [
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "KEBIJAKAN KERJA REMOTE\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Ketentuan Kerja Remote\nKerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.\n\n2. Persetujuan\nKaryawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan."
+    ],
+    "Faithfulness": 0.8333333333333334,
+    "Answer Relevancy": 0.8786941041465975,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "22": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, jika terjadi kesalahan pencatatan kehadiran, karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai.",
+    "contexts": [
+      "4. Keterlambatan\nKaryawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR.\n\n5. Koreksi Kehadiran\nJika terjadi kesalahan pencatatan kehadiran, karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai.",
+      "KEBIJAKAN JAM KERJA DAN KEHADIRAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Jam Kerja\nJam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB.\n\n2. Waktu Istirahat\nKaryawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.\n\n3. Pencatatan Kehadiran\nKaryawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.756170880687112,
+    "Context Precision": 0.9999999999,
+    "Context Recall": 1.0
+  },
+  "23": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, **nominal tunjangan transportasi tidak disebutkan**.\n\nDokumen hanya menyatakan bahwa karyawan yang memenuhi kriteria internal perusahaan dapat menerima tunjangan transportasi sesuai ketentuan yang ditetapkan oleh HR, namun tidak mencantumkan angka atau nilai nominal spesifik.\n\nSesuai dengan poin 5 dalam dokumen (\"Informasi yang Belum Tersedia\"), karena nilai nominal tidak tercantum, Anda disarankan untuk mengonfirmasi informasi tersebut langsung kepada HR.",
+    "contexts": [
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR.",
+      "KEBIJAKAN TUNJANGAN KARYAWAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Tunjangan Transportasi\nKaryawan yang memenuhi kriteria internal perusahaan dapat menerima tunjangan transportasi sesuai ketentuan yang ditetapkan oleh HR.\n\n2. Tunjangan Komunikasi\nKaryawan yang pekerjaannya membutuhkan komunikasi intensif dapat memperoleh tunjangan komunikasi berdasarkan persetujuan atasan dan ketentuan internal perusahaan.",
+      "6. Pengajuan Tidak Lengkap\nPengajuan yang tidak memiliki bukti transaksi atau informasi yang diperlukan dapat dikembalikan kepada karyawan untuk dilengkapi.\n\n7. Ketentuan Data\nDokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis."
+    ],
+    "Faithfulness": 0.8,
+    "Answer Relevancy": 0.86301903803116,
+    "Context Precision": 0.9999999999666667,
+    "Context Recall": 0.5
+  },
+  "24": {
+    "answer": "Berdasarkan dokumen kebijakan yang tersedia, informasi mengenai **batas maksimum nominal tunjangan komunikasi per bulan tidak ditemukan**.\n\nDokumen `kebijakan_tunjangan.txt` hanya menyebutkan bahwa karyawan yang pekerjaannya membutuhkan komunikasi intensif dapat memperoleh tunjangan komunikasi berdasarkan persetujuan atasan dan ketentuan internal perusahaan, namun tidak mencantumkan angka nominal atau batas maksimumnya.\n\nSesuai dengan poin 5 dalam dokumen tersebut (\"Informasi yang Belum Tersedia\"), saya menyarankan Anda untuk **menghubungi HR** guna mengonfirmasi nilai nominal atau batas maksimum tunjangan komunikasi tersebut.",
+    "contexts": [
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR.",
+      "KEBIJAKAN TUNJANGAN KARYAWAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Tunjangan Transportasi\nKaryawan yang memenuhi kriteria internal perusahaan dapat menerima tunjangan transportasi sesuai ketentuan yang ditetapkan oleh HR.\n\n2. Tunjangan Komunikasi\nKaryawan yang pekerjaannya membutuhkan komunikasi intensif dapat memperoleh tunjangan komunikasi berdasarkan persetujuan atasan dan ketentuan internal perusahaan.",
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan."
+    ],
+    "Faithfulness": 0.25,
+    "Answer Relevancy": 0.8720293531834847,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "25": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, informasi mengenai hak cuti untuk **karyawan kontrak** atau karyawan yang baru bekerja **6 bulan** tidak ditemukan.\n\nDokumen `kebijakan_cuti.txt` hanya menyebutkan bahwa:\n> \"Setiap **karyawan tetap** yang telah bekerja selama **12 bulan** berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\"\n\nKarena dokumen tidak memuat ketentuan khusus untuk karyawan kontrak atau masa kerja kurang dari 12 bulan, saya menyarankan Anda untuk menghubungi tim HR guna mendapatkan kejelasan mengenai hak cuti untuk posisi tersebut.",
+    "contexts": [
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."
+    ],
+    "Faithfulness": 0.5,
+    "Answer Relevancy": 0.859891252714986,
+    "Context Precision": 0.99999999995,
+    "Context Recall": 1.0
+  },
+  "26": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, informasi mengenai batas waktu atau durasi yang harus ditempuh oleh HR untuk menyelesaikan pembayaran reimbursement setelah pengajuan disetujui **tidak ditemukan**.\n\nDokumen hanya menyebutkan bahwa:\n1. Pengajuan wajib dilengkapi bukti transaksi valid.\n2. Batas pengajuan adalah 30 hari kalender sejak tanggal transaksi.\n3. Penggantian biaya dilakukan **setelah** pengajuan diverifikasi dan disetujui sesuai prosedur internal.\n\nNamun, tidak ada ketentuan spesifik tentang berapa lama proses pembayaran itu sendiri harus diselesaikan setelah persetujuan diberikan.\n\nSaran: Silakan hubungi tim HR untuk mendapatkan informasi lebih lanjut mengenai estimasi waktu penyelesaian pembayaran reimbursement.",
+    "contexts": [
+      "3. Bukti Transaksi\nSetiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.\n\n4. Batas Pengajuan\nKaryawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.\n\n5. Proses Persetujuan\nPengajuan akan diperiksa oleh tim terkait. Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan.",
+      "3. Persetujuan Cuti\n   Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti.\n\n4. Sisa Cuti\n   Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR.\n\n5. Ketentuan Data\n   Dokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "KEBIJAKAN REIMBURSEMENT\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Pengertian\nReimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.\n\n2. Biaya yang Dapat Diajukan\nBiaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal."
+    ],
+    "Faithfulness": 0.3333333333333333,
+    "Answer Relevancy": 0.7944874051501163,
+    "Context Precision": 0.8333333332916666,
+    "Context Recall": 1.0
+  },
+  "27": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, **tidak ditemukan informasi** mengenai sanksi spesifik bagi karyawan yang terlambat lebih dari tiga kali.\n\nDokumen `kebijakan_jam_kerja.txt` hanya menyebutkan bahwa:\n1. Karyawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran.\n2. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR.\n\nKarena detail mengenai frekuensi keterlambatan (misalnya \"lebih dari tiga kali\") dan sanksi yang berlaku tidak tercantum dalam konteks yang tersedia, saya menyarankan Anda untuk **menghubungi HR** untuk mendapatkan informasi yang akurat mengenai prosedur dan sanksi keterlambatan.",
+    "contexts": [
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "4. Keterlambatan\nKaryawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR.\n\n5. Koreksi Kehadiran\nJika terjadi kesalahan pencatatan kehadiran, karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai.",
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR."
+    ],
+    "Faithfulness": 0.4,
+    "Answer Relevancy": 0.9111614556241822,
+    "Context Precision": 0.49999999995,
+    "Context Recall": 1.0
+  },
+  "28": {
+    "answer": "Berdasarkan dokumen kebijakan yang tersedia, berikut adalah informasi mengenai pengajuan cuti:\n\n1.  **Waktu Pengajuan:** Karyawan wajib mengajukan cuti **paling lambat 3 hari kerja** sebelum tanggal cuti yang direncanakan.\n2.  **Saluran Pengajuan:** Pengajuan dilakukan melalui **sistem HR**.\n\n*Catatan: Dokumen ini merupakan data sintetis untuk latihan dan bukan kebijakan perusahaan nyata.*",
+    "contexts": [
+      "6. Pengajuan Tidak Lengkap\nPengajuan yang tidak memiliki bukti transaksi atau informasi yang diperlukan dapat dikembalikan kepada karyawan untuk dilengkapi.\n\n7. Ketentuan Data\nDokumen ini merupakan kebijakan sintetis untuk pembelajaran dan pengujian sistem AI. Isinya bukan kebijakan perusahaan nyata atau ketentuan hukum yang berlaku secara otomatis.",
+      "KEBIJAKAN JAM KERJA DAN KEHADIRAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Jam Kerja\nJam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB.\n\n2. Waktu Istirahat\nKaryawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.\n\n3. Pencatatan Kehadiran\nKaryawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+      "KEBIJAKAN CUTI TAHUNAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Hak Cuti Tahunan\n   Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.\n\n2. Pengajuan Cuti\n   Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.5609470333241312,
+    "Context Precision": 0.3333333333,
+    "Context Recall": 0.5
+  },
+  "29": {
+    "answer": "Berdasarkan dokumen kebijakan yang diberikan, **tidak ditemukan informasi** mengenai prosedur penggantian biaya pembelian kebutuhan kerja atau tunjangan operasional.\n\nDokumen `kebijakan_tunjangan.txt` hanya menyatakan bahwa kelayakan tunjangan ditentukan berdasarkan posisi, tanggung jawab, dan ketentuan internal, serta menegaskan bahwa jika kriteria spesifik atau nilai nominal tidak tercantum, karyawan harus mengonfirmasi ke HR.\n\nOleh karena itu, saya menyarankan Anda untuk **menghubungi HR** untuk mengonfirmasi apakah pembelian kebutuhan kerja tersebut termasuk dalam cakupan penggantian biaya perusahaan.",
+    "contexts": [
+      "KEBIJAKAN JAM KERJA DAN KEHADIRAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Jam Kerja\nJam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB.\n\n2. Waktu Istirahat\nKaryawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.\n\n3. Pencatatan Kehadiran\nKaryawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "3. Informasi Kelayakan\nKelayakan karyawan untuk menerima tunjangan ditentukan berdasarkan posisi, tanggung jawab pekerjaan, dan ketentuan internal perusahaan yang berlaku.\n\n4. Perubahan Tunjangan\nPerubahan ketentuan tunjangan akan diinformasikan melalui saluran komunikasi resmi perusahaan.\n\n5. Informasi yang Belum Tersedia\nJika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR."
+    ],
+    "Faithfulness": 0.75,
+    "Answer Relevancy": 0.5368797372686201,
+    "Context Precision": 0.0,
+    "Context Recall": 0.0
+  },
+  "30": {
+    "answer": "Berdasarkan dokumen kebijakan yang tersedia, **tidak boleh**.\n\nKebijakan Kerja Remote (Pasal 3: Ketersediaan) secara tegas menyatakan bahwa karyawan yang bekerja secara remote **wajib tetap dapat dihubungi selama jam kerja**. Oleh karena itu, tidak merespons pesan tim selama jam kerja melanggar ketentuan ketersediaan tersebut.",
+    "contexts": [
+      "3. Ketersediaan\nKaryawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.\n\n4. Keamanan Data\nKaryawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.\n\n5. Perangkat Kerja\nKaryawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan.",
+      "KEBIJAKAN JAM KERJA DAN KEHADIRAN\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Jam Kerja\nJam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB.\n\n2. Waktu Istirahat\nKaryawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.\n\n3. Pencatatan Kehadiran\nKaryawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+      "KEBIJAKAN KERJA REMOTE\nPerusahaan: XYZ Tech\nVersi: 1.0\nStatus: Data sintetis untuk latihan PolicyMind AI\n\n1. Ketentuan Kerja Remote\nKerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.\n\n2. Persetujuan\nKaryawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan."
+    ],
+    "Faithfulness": 1.0,
+    "Answer Relevancy": 0.8590024730023663,
+    "Context Precision": 0.9999999999666667,
+    "Context Recall": 1.0
+  },
+  "_summary": {
+    "Faithfulness": {
+      "average": 0.8594444444444443,
+      "completed": 30,
+      "total": 30
+    },
+    "Answer Relevancy": {
+      "average": 0.813816645422578,
+      "completed": 30,
+      "total": 30
+    },
+    "Context Precision": {
+      "average": 0.8888888888208333,
+      "completed": 30,
+      "total": 30
+    },
+    "Context Recall": {
+      "average": 0.9333333333333333,
+      "completed": 30,
+      "total": 30
+    }
+  }
+}

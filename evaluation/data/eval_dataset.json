@@ -1,0 +1,182 @@
+[
+  {
+    "question": "Berapa hari cuti tahunan yang didapatkan karyawan?",
+    "ground_truth": "Karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan 12 hari kerja cuti tahunan untuk setiap tahun kerja.",
+    "reference_contexts": ["Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja."],
+    "source": "kebijakan_cuti.txt"
+  },
+  {
+    "question": "Siapa yang berhak mendapatkan cuti tahunan?",
+    "ground_truth": "Karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan.",
+    "reference_contexts": ["Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja."],
+    "source": "kebijakan_cuti.txt"
+  },
+  {
+    "question": "Kapan cuti harus diajukan sebelum tanggal yang direncanakan?",
+    "ground_truth": "Cuti wajib diajukan melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.",
+    "reference_contexts": ["Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan."],
+    "source": "kebijakan_cuti.txt"
+  },
+  {
+    "question": "Di mana karyawan dapat memeriksa sisa cuti tahunan?",
+    "ground_truth": "Sisa cuti tahunan dapat diperiksa melalui sistem HR.",
+    "reference_contexts": ["Sisa cuti tahunan dapat diperiksa melalui sistem HR. Perhitungan sisa cuti mengikuti data cuti yang telah disetujui dan dicatat oleh HR."],
+    "source": "kebijakan_cuti.txt"
+  },
+  {
+    "question": "Pada hari apa karyawan menjalani jam kerja reguler?",
+    "ground_truth": "Jam kerja reguler berlaku dari Senin sampai Jumat.",
+    "reference_contexts": ["Jam kerja reguler karyawan adalah Senin sampai Jumat, pukul 09.00–17.00 WIB."],
+    "source": "kebijakan_jam_kerja.txt"
+  },
+  {
+    "question": "Berapa lama waktu istirahat karyawan setiap hari kerja?",
+    "ground_truth": "Karyawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif.",
+    "reference_contexts": ["Karyawan mendapatkan waktu istirahat selama 60 menit setiap hari kerja. Waktu istirahat tidak termasuk dalam jam kerja efektif."],
+    "source": "kebijakan_jam_kerja.txt"
+  },
+  {
+    "question": "Bagaimana karyawan mencatat kehadiran?",
+    "ground_truth": "Karyawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan.",
+    "reference_contexts": ["Karyawan wajib mencatat waktu masuk dan waktu pulang melalui sistem kehadiran perusahaan."],
+    "source": "kebijakan_jam_kerja.txt"
+  },
+  {
+    "question": "Apa yang harus dilakukan karyawan jika terlambat?",
+    "ground_truth": "Karyawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR.",
+    "reference_contexts": ["Karyawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR."],
+    "source": "kebijakan_jam_kerja.txt"
+  },
+  {
+    "question": "Apa itu reimbursement?",
+    "ground_truth": "Reimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan.",
+    "reference_contexts": ["Reimbursement adalah proses penggantian biaya yang telah dikeluarkan karyawan untuk keperluan pekerjaan yang disetujui perusahaan."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Biaya apa saja yang dapat diajukan untuk reimbursement?",
+    "ground_truth": "Biaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.",
+    "reference_contexts": ["Biaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Bukti apa yang wajib dilampirkan saat mengajukan reimbursement?",
+    "ground_truth": "Setiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.",
+    "reference_contexts": ["Setiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Berapa batas waktu pengajuan reimbursement?",
+    "ground_truth": "Reimbursement wajib diajukan paling lambat 30 hari kalender sejak tanggal transaksi.",
+    "reference_contexts": ["Karyawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Apa yang terjadi jika pengajuan reimbursement tidak memiliki bukti transaksi?",
+    "ground_truth": "Pengajuan yang tidak memiliki bukti transaksi atau informasi yang diperlukan dapat dikembalikan kepada karyawan untuk dilengkapi.",
+    "reference_contexts": ["Pengajuan yang tidak memiliki bukti transaksi atau informasi yang diperlukan dapat dikembalikan kepada karyawan untuk dilengkapi."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Apa yang dimaksud dengan kerja remote dalam kebijakan ini?",
+    "ground_truth": "Kerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital.",
+    "reference_contexts": ["Kerja remote adalah pengaturan kerja yang memungkinkan karyawan menjalankan tugas dari luar kantor dengan menggunakan sarana komunikasi digital."],
+    "source": "kebijakan_remote.txt"
+  },
+  {
+    "question": "Apakah karyawan boleh langsung bekerja remote tanpa persetujuan?",
+    "ground_truth": "Tidak. Karyawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.",
+    "reference_contexts": ["Karyawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan."],
+    "source": "kebijakan_remote.txt"
+  },
+  {
+    "question": "Apa kewajiban karyawan saat bekerja remote terkait komunikasi?",
+    "ground_truth": "Karyawan remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.",
+    "reference_contexts": ["Karyawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim."],
+    "source": "kebijakan_remote.txt"
+  },
+  {
+    "question": "Bagaimana karyawan harus menjaga keamanan data saat bekerja remote?",
+    "ground_truth": "Karyawan wajib menjaga kerahasiaan informasi perusahaan dan tidak boleh membagikan dokumen atau data perusahaan kepada pihak yang tidak berwenang.",
+    "reference_contexts": ["Karyawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang."],
+    "source": "kebijakan_remote.txt"
+  },
+  {
+    "question": "Perangkat seperti apa yang wajib digunakan untuk mengakses informasi perusahaan?",
+    "ground_truth": "Karyawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan.",
+    "reference_contexts": ["Karyawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."],
+    "source": "kebijakan_remote.txt"
+  },
+  {
+    "question": "Apa saja ketentuan utama yang harus dipenuhi untuk mengambil cuti tahunan?",
+    "ground_truth": "Karyawan tetap harus telah bekerja selama 12 bulan untuk memperoleh hak 12 hari kerja cuti tahunan. Pengajuan dilakukan melalui sistem HR paling lambat 3 hari kerja sebelumnya dan harus disetujui atasan langsung sebelum cuti diambil.",
+    "reference_contexts": ["Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja.", "Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.", "Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti."],
+    "source": "kebijakan_cuti.txt"
+  },
+  {
+    "question": "Apa saja syarat agar biaya dapat diganti melalui reimbursement?",
+    "ground_truth": "Biaya harus berkaitan dengan pekerjaan, memperoleh persetujuan sesuai prosedur internal, diajukan paling lambat 30 hari kalender sejak transaksi, dan dilengkapi bukti transaksi yang valid. Penggantian dilakukan setelah pengajuan diverifikasi dan disetujui.",
+    "reference_contexts": ["Biaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.", "Setiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.", "Karyawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.", "Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Apa yang perlu diperhatikan karyawan ketika bekerja remote agar sesuai kebijakan?",
+    "ground_truth": "Karyawan harus mendapat persetujuan atasan langsung, tetap dapat dihubungi selama jam kerja, menghadiri rapat yang diwajibkan, menjaga kerahasiaan informasi perusahaan, tidak membagikan data kepada pihak tidak berwenang, serta menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal.",
+    "reference_contexts": ["Karyawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.", "Karyawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim.", "Karyawan wajib menjaga kerahasiaan informasi perusahaan ketika bekerja dari luar kantor. Dokumen dan data perusahaan tidak boleh dibagikan kepada pihak yang tidak berwenang.", "Karyawan wajib menggunakan perangkat dan aplikasi yang memenuhi ketentuan keamanan internal perusahaan untuk mengakses informasi perusahaan."],
+    "source": "kebijakan_remote.txt"
+  },
+  {
+    "question": "Bagaimana karyawan memperbaiki kesalahan catatan kehadiran?",
+    "ground_truth": "Karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai.",
+    "reference_contexts": ["Jika terjadi kesalahan pencatatan kehadiran, karyawan dapat mengajukan koreksi kepada HR dengan menyertakan alasan yang sesuai."],
+    "source": "kebijakan_jam_kerja.txt"
+  },
+  {
+    "question": "Apakah nominal tunjangan transportasi disebutkan dalam dokumen?",
+    "ground_truth": "Tidak. Dokumen tidak mencantumkan nominal tunjangan transportasi. Kelayakan dan ketentuannya mengikuti kriteria internal perusahaan dan ketentuan HR. Informasi yang belum tersedia harus dikonfirmasi kepada HR.",
+    "reference_contexts": ["Karyawan yang memenuhi kriteria internal perusahaan dapat menerima tunjangan transportasi sesuai ketentuan yang ditetapkan oleh HR.", "Jika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR."],
+    "source": "kebijakan_tunjangan.txt"
+  },
+  {
+    "question": "Berapa batas maksimum tunjangan komunikasi per bulan?",
+    "ground_truth": "Batas maksimum dan nominal tunjangan komunikasi tidak tercantum dalam dokumen. Informasi tersebut harus dikonfirmasi kepada HR.",
+    "reference_contexts": ["Jika nilai nominal, batas maksimum, atau kriteria spesifik tunjangan tidak tercantum dalam dokumen kebijakan, karyawan harus mengonfirmasi informasi tersebut kepada HR."],
+    "source": "kebijakan_tunjangan.txt"
+  },
+  {
+    "question": "Berapa hari cuti tahunan untuk karyawan kontrak yang baru bekerja 6 bulan?",
+    "ground_truth": "Dokumen hanya menyatakan bahwa karyawan tetap yang telah bekerja selama 12 bulan berhak atas 12 hari kerja cuti tahunan. Hak cuti untuk karyawan kontrak atau karyawan dengan masa kerja 6 bulan tidak dijelaskan, sehingga tidak dapat dipastikan dari dokumen ini.",
+    "reference_contexts": ["Setiap karyawan tetap yang telah bekerja selama 12 bulan berhak mendapatkan cuti tahunan sebanyak 12 hari kerja untuk setiap tahun kerja."],
+    "source": "kebijakan_cuti.txt"
+  },
+  {
+    "question": "Berapa lama HR harus menyelesaikan pembayaran reimbursement setelah disetujui?",
+    "ground_truth": "Dokumen tidak menyebutkan jangka waktu pembayaran reimbursement setelah persetujuan. Dokumen hanya menyatakan bahwa penggantian dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal.",
+    "reference_contexts": ["Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Apa sanksi bagi karyawan yang terlambat lebih dari tiga kali?",
+    "ground_truth": "Dokumen tidak menjelaskan sanksi atau ambang jumlah keterlambatan. Dokumen hanya menyatakan bahwa karyawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran dan penanganannya mengikuti prosedur internal HR.",
+    "reference_contexts": ["Karyawan yang terlambat wajib memberikan keterangan melalui sistem kehadiran. Penanganan keterlambatan mengikuti prosedur internal yang ditetapkan oleh HR."],
+    "source": "kebijakan_jam_kerja.txt"
+  },
+  {
+    "question": "Kalau mau izin beberapa hari, kapan dan lewat mana pengajuannya?",
+    "ground_truth": "Jika yang dimaksud adalah cuti tahunan, pengajuan harus dilakukan melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan, dan harus disetujui atasan langsung sebelum cuti diambil.",
+    "reference_contexts": ["Karyawan wajib mengajukan cuti melalui sistem HR paling lambat 3 hari kerja sebelum tanggal cuti yang direncanakan.", "Pengajuan cuti harus mendapatkan persetujuan dari atasan langsung sebelum karyawan mengambil cuti."],
+    "source": "kebijakan_cuti.txt"
+  },
+  {
+    "question": "Kalau saya sudah membeli kebutuhan kerja, apakah pasti akan diganti?",
+    "ground_truth": "Tidak otomatis. Pembelian kebutuhan kerja dapat diajukan jika berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal. Pengajuan harus memiliki bukti transaksi yang valid dan diajukan paling lambat 30 hari kalender sejak transaksi. Penggantian dilakukan setelah verifikasi dan persetujuan.",
+    "reference_contexts": ["Biaya transportasi, akomodasi perjalanan dinas, dan pembelian kebutuhan kerja dapat diajukan untuk reimbursement apabila berkaitan dengan pekerjaan dan telah memperoleh persetujuan sesuai prosedur internal.", "Setiap pengajuan reimbursement wajib dilengkapi bukti transaksi yang valid, seperti kuitansi atau struk pembayaran.", "Karyawan wajib mengajukan reimbursement paling lambat 30 hari kalender sejak tanggal transaksi.", "Penggantian biaya hanya dilakukan setelah pengajuan diverifikasi dan disetujui sesuai prosedur internal perusahaan."],
+    "source": "kebijakan_reimbursement.txt"
+  },
+  {
+    "question": "Bolehkah saya bekerja remote tetapi tidak merespons pesan tim selama jam kerja?",
+    "ground_truth": "Tidak sesuai kebijakan. Karyawan remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim. Kerja remote juga memerlukan persetujuan atasan langsung.",
+    "reference_contexts": ["Karyawan hanya dapat menjalankan kerja remote setelah memperoleh persetujuan dari atasan langsung sesuai prosedur internal perusahaan.", "Karyawan yang bekerja secara remote wajib tetap dapat dihubungi selama jam kerja dan menghadiri rapat yang diwajibkan oleh tim."],
+    "source": "kebijakan_remote.txt"
+  }
+]
