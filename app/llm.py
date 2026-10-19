@@ -1,4 +1,3 @@
-
 import os
 
 from dotenv import load_dotenv
@@ -7,19 +6,19 @@ from groq import Groq
 
 load_dotenv()
 
-api_key = os.getenv("GROQ_API_KEY")
-
-if not api_key:
-    raise ValueError(
-        "GROQ_API_KEY belum ditemukan. Periksa file .env."
-    )
-
-client = Groq(api_key=api_key)
-
 MODEL_NAME = "qwen/qwen3.8-27b"
 
 
 def generate_answer(question, context):
+    api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key:
+        raise RuntimeError(
+            "GROQ_API_KEY belum dikonfigurasi."
+        )
+
+    client = Groq(api_key=api_key)
+
     response = client.chat.completions.create(
         model=MODEL_NAME,
         messages=[
@@ -63,3 +62,4 @@ if __name__ == "__main__":
     print("Pertanyaan:", question)
     print("\nJawaban PolicyMind AI:")
     print(answer)
+    

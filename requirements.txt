@@ -3,9 +3,4 @@ sentence-transformers
 chromadb
 groq
 python-dotenv
-ragas
-openai
-matplotlib
-fastapi 
-uvicorn
-pytest
+fastapi[standard]

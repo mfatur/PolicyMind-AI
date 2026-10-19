@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 import chromadb
@@ -11,13 +10,17 @@ DB_DIR = Path(__file__).resolve().parents[1] / "data" / "chroma_db"
 COLLECTION_NAME = "policy_documents"
 
 client = chromadb.PersistentClient(path=str(DB_DIR))
-collection = client.get_collection(name=COLLECTION_NAME)
 
 RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 reranker = CrossEncoder(RERANKER_MODEL)
 
 
+def get_collection():
+    return client.get_collection(name=COLLECTION_NAME)
+
+
 def retrieve_documents(question, top_k=3, search_query=None):
+    collection = get_collection()
     # Ambil kandidat lebih banyak sebelum reranking.
     candidate_k = min(max(top_k * 3, top_k), collection.count())
 

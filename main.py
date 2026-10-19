@@ -1,17 +1,27 @@
 import logging
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
-from app.rag_pipeline import ask_policy
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    from app.vector_store import create_vector_store
+
+    create_vector_store()
+    logger.info("ChromaDB siap digunakan.")
+    yield
+
 
 app = FastAPI(
     title="PolicyMind AI",
     description="API untuk tanya jawab kebijakan perusahaan.",
     version="1.0.0",
+    lifespan=lifespan,
 )
 
 
@@ -39,10 +49,12 @@ def ask(request: AskRequest):
         )
 
     try:
+        from app.rag_pipeline import ask_policy
+
         return ask_policy(question)
     except Exception:
         logger.exception("Gagal memproses pertanyaan pada endpoint /ask")
         raise HTTPException(
             status_code=500,
             detail="Terjadi kesalahan saat memproses pertanyaan.",
-    )  
+        )
