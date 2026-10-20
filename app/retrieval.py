@@ -1,7 +1,6 @@
 from pathlib import Path
 
 import chromadb
-from sentence_transformers import CrossEncoder
 
 from app.embedding import create_embeddings
 from langfuse import observe
@@ -11,10 +10,6 @@ COLLECTION_NAME = "policy_documents"
 
 client = chromadb.PersistentClient(path=str(DB_DIR))
 
-RERANKER_MODEL = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-reranker = CrossEncoder(RERANKER_MODEL)
-
-
 def get_collection():
     return client.get_collection(name=COLLECTION_NAME)
 
@@ -22,7 +17,7 @@ def get_collection():
 def retrieve_documents(question, top_k=3, search_query=None):
     collection = get_collection()
     # Ambil kandidat lebih banyak sebelum reranking.
-    candidate_k = min(max(top_k * 5, top_k), collection.count())
+    candidate_k = min(max(top_k * 10, top_k), collection.count())
 
     retrieval_query = search_query or question
     query_embedding = create_embeddings([retrieval_query])
@@ -51,29 +46,9 @@ def retrieve_documents(question, top_k=3, search_query=None):
     if not candidates:
         return []
 
-    pairs = [
-        (question, candidate["content"])
-        for candidate in candidates
-    ]
-    print("MULAI RERANKING", flush=True)
-    scores = reranker.predict(pairs)
-    print("RERANKING SELESAI", flush=True)
-    for candidate, score in zip(candidates, scores):
-        candidate["rerank_score"] = float(score)
-
-    ranked_documents = sorted(
-        candidates,
-        key=lambda doc: doc["rerank_score"],
-        reverse=True,
-    )
-    print("\n=== HASIL RERANKING ===")
-    for i, doc in enumerate(ranked_documents, start=1):
-        print(
-            f"{i}. source={doc['source']} | "
-            f"rerank_score={doc['rerank_score']:.4f}"
-        )
-        print(doc["content"][:200].replace("\n", " "))
-    return ranked_documents[:top_k]
+    # ChromaDB sudah mengurutkan kandidat berdasarkan jarak embedding.
+    # Ambil top_k kandidat teratas tanpa menjalankan reranker.
+    return candidates[:top_k]
 
 
 if __name__ == "__main__":
@@ -86,5 +61,4 @@ if __name__ == "__main__":
         print(f"\n--- Hasil {i} ---")
         print("Sumber:", result["source"])
         print("Distance:", round(result["distance"], 4))
-        print("Rerank score:", round(result["rerank_score"], 4))
         print("Isi:", result["content"])

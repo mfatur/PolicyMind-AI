@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from app.retrieval import retrieve_documents
 from app.llm import generate_answer
