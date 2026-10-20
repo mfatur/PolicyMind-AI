@@ -1,8 +1,9 @@
 
 from app.retrieval import retrieve_documents
 from app.llm import generate_answer
+from langfuse import observe
 
-
+@observe(name="policy-ask", as_type="chain")
 def ask_policy(question):
     documents = retrieve_documents(question, top_k=3)
 

@@ -2,13 +2,13 @@ import os
 
 from dotenv import load_dotenv
 from groq import Groq
-
+from langfuse import observe
 
 load_dotenv()
 
 MODEL_NAME = "qwen/qwen3.8-27b"
 
-
+@observe(name="generate-answer", as_type="generation")
 def generate_answer(question, context):
     api_key = os.getenv("GROQ_API_KEY")
 

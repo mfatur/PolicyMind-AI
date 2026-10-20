@@ -4,7 +4,7 @@ import chromadb
 from sentence_transformers import CrossEncoder
 
 from app.embedding import create_embeddings
-
+from langfuse import observe
 
 DB_DIR = Path(__file__).resolve().parents[1] / "data" / "chroma_db"
 COLLECTION_NAME = "policy_documents"
@@ -18,11 +18,11 @@ reranker = CrossEncoder(RERANKER_MODEL)
 def get_collection():
     return client.get_collection(name=COLLECTION_NAME)
 
-
+@observe(name="retrieve-documents", as_type="retriever")
 def retrieve_documents(question, top_k=3, search_query=None):
     collection = get_collection()
     # Ambil kandidat lebih banyak sebelum reranking.
-    candidate_k = min(max(top_k * 3, top_k), collection.count())
+    candidate_k = min(max(top_k * 5, top_k), collection.count())
 
     retrieval_query = search_query or question
     query_embedding = create_embeddings([retrieval_query])
@@ -55,9 +55,9 @@ def retrieve_documents(question, top_k=3, search_query=None):
         (question, candidate["content"])
         for candidate in candidates
     ]
-
+    print("MULAI RERANKING", flush=True)
     scores = reranker.predict(pairs)
-
+    print("RERANKING SELESAI", flush=True)
     for candidate, score in zip(candidates, scores):
         candidate["rerank_score"] = float(score)
 
@@ -77,7 +77,7 @@ def retrieve_documents(question, top_k=3, search_query=None):
 
 
 if __name__ == "__main__":
-    question = "Kalau saya sudah membeli kebutuhan kerja, apakah pasti akan diganti?"
+    question = "Apa syarat dan proses persetujuan reimbursement agar biaya dapat diganti?"
     results = retrieve_documents(question, top_k=3)
 
     print("Pertanyaan:", question)
