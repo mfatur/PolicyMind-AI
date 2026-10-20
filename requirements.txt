@@ -8,4 +8,4 @@ groq
 python-dotenv
 fastapi[standard]
 torch==2.14.1+cpu
-langfuse
+
