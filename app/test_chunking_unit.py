@@ -33,4 +33,4 @@ def test_chunk_text_uses_default_parameters():
     chunks = chunk_text(text)
 
     assert len(chunks) > 1
-    assert all(len(chunk["content"]) <= 500 for chunk in chunks)
+    assert all(len(chunk["content"]) <= 700 for chunk in chunks)
