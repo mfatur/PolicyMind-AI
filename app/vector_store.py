@@ -11,11 +11,26 @@ COLLECTION_NAME = "policy_documents"
 
 
 def create_vector_store():
+    # Siapkan chunk dan embedding sebelum menyentuh database lama.
     chunks, embeddings = embed_documents()
+
+    if not chunks:
+        raise ValueError("Tidak ada chunk yang bisa dimasukkan ke vector store.")
 
     client = chromadb.PersistentClient(path=str(DB_DIR))
 
-    collection = client.get_or_create_collection(
+    # Hapus collection lama agar tidak ada chunk kebijakan yang tertinggal.
+    existing_collections = client.list_collections()
+    existing_names = [
+        collection.name if hasattr(collection, "name") else collection
+        for collection in existing_collections
+    ]
+
+    if COLLECTION_NAME in existing_names:
+        client.delete_collection(name=COLLECTION_NAME)
+
+    # Buat collection baru khusus dokumen yang sedang aktif.
+    collection = client.create_collection(
         name=COLLECTION_NAME,
         metadata={"hnsw:space": "cosine"},
     )
@@ -25,7 +40,7 @@ def create_vector_store():
         for chunk in chunks
     ]
 
-    collection.upsert(
+    collection.add(
         ids=ids,
         documents=[chunk["content"] for chunk in chunks],
         embeddings=embeddings.tolist(),
@@ -44,6 +59,10 @@ def create_vector_store():
 if __name__ == "__main__":
     collection = create_vector_store()
 
-    print("Vector store berhasil dibuat.")
+    print("Vector store berhasil dibangun ulang.")
     print("Jumlah data:", collection.count())
     print("Nama collection:", collection.name)
+    print("Sumber dokumen:", sorted({
+        metadata["source"]
+        for metadata in collection.get(include=["metadatas"])["metadatas"]
+    }))

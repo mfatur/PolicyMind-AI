@@ -10,3 +10,4 @@ fastapi[standard]
 torch==2.14.1+cpu
 langfuse
 pytest
+pypdf

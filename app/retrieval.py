@@ -52,7 +52,7 @@ def retrieve_documents(question, top_k=3, search_query=None):
 
 
 if __name__ == "__main__":
-    question = "Apa syarat dan proses persetujuan reimbursement agar biaya dapat diganti?"
+    question = "Berapa maksimal hari WFH dalam seminggu?"
     results = retrieve_documents(question, top_k=3)
 
     print("Pertanyaan:", question)
