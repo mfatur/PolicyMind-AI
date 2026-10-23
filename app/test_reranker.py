@@ -1,54 +1,74 @@
+from contextlib import redirect_stdout
+from io import StringIO
+import json
+from pathlib import Path
 
 from sentence_transformers import CrossEncoder
+from app.retrieval import retrieve_documents
 
-model_name = "cross-encoder/ms-marco-MiniLM-L-6-v2"
-reranker = CrossEncoder(model_name)
 
-question = "Berapa lama waktu istirahat karyawan setiap hari kerja?"
+DATA_PATH = Path("evaluation/data/eval_dataset.json")
+QUESTIONS = [1, 13, 16, 28, 30]
 
-candidates = [
-    {
-        "source": "kebijakan_jam_kerja.txt",
-        "content": (
-            "4. Keterlambatan\n"
-            "Karyawan yang terlambat wajib memberikan keterangan "
-            "melalui sistem kehadiran."
-        ),
-    },
-    {
-        "source": "kebijakan_jam_kerja.txt",
-        "content": (
-            "2. Waktu Istirahat\n"
-            "Karyawan mendapatkan waktu istirahat selama 60 menit "
-            "setiap hari kerja. Waktu istirahat tidak termasuk "
-            "dalam jam kerja efektif."
-        ),
-    },
-    {
-        "source": "kebijakan_cuti.txt",
-        "content": (
-            "Setiap karyawan tetap yang telah bekerja selama "
-            "12 bulan berhak mendapatkan cuti tahunan sebanyak "
-            "12 hari kerja."
-        ),
-    },
-]
+data = json.loads(DATA_PATH.read_text(encoding="utf-8"))
 
-pairs = [
-    (question, candidate["content"])
-    for candidate in candidates
-]
-
-scores = reranker.predict(pairs)
-
-ranked_results = sorted(
-    zip(scores, candidates),
-    key=lambda item: item[0],
-    reverse=True,
+model = CrossEncoder(
+    "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
 )
 
-for rank, (score, candidate) in enumerate(ranked_results, start=1):
-    print(f"\n--- Peringkat {rank} ---")
-    print(f"Skor: {float(score):.4f}")
-    print(f"Sumber: {candidate['source']}")
-    print(f"Isi: {candidate['content']}")
+for number in QUESTIONS:
+    item = data[number - 1]
+    question = item["question"]
+    references = item["reference_contexts"]
+
+    # Ambil kandidat satu kali agar kedua metode membandingkan
+    # kumpulan dokumen yang sama.
+    with redirect_stdout(StringIO()):
+        candidates = retrieve_documents(question, top_k=9)
+
+    pairs = [
+        (question, candidate["content"])
+        for candidate in candidates
+    ]
+    scores = model.predict(pairs)
+
+    reranked = sorted(
+        zip(candidates, scores),
+        key=lambda pair: float(pair[1]),
+        reverse=True,
+    )
+
+    def matches_reference(content):
+        content = " ".join(content.split()).casefold()
+        return any(
+            " ".join(reference.split()).casefold() in content
+            for reference in references
+        )
+
+    baseline_rank = next(
+        (
+            rank
+            for rank, candidate in enumerate(candidates, start=1)
+            if matches_reference(candidate["content"])
+        ),
+        None,
+    )
+
+    reranked_rank = next(
+        (
+            rank
+            for rank, (candidate, _) in enumerate(reranked, start=1)
+            if matches_reference(candidate["content"])
+        ),
+        None,
+    )
+
+    print(f"\n{'=' * 65}")
+    print(f"Q{number}: {question}")
+    print("Baseline rank:", baseline_rank)
+    print("CrossEncoder rank:", reranked_rank)
+
+    print("\nTop 3 CrossEncoder:")
+    for rank, (candidate, score) in enumerate(reranked[:3], start=1):
+        print(f"{rank}. score={float(score):.4f}")
+        print(candidate["content"][:220].replace("\n", " "))

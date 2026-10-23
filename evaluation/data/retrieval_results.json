@@ -1,431 +1,1835 @@
 {
+  "schema_version": 2,
+  "retrieval_source": "current ChromaDB policy_documents collection",
   "summary": {
     "total_questions": 30,
-    "hit_rate_at_3": 0.9666666666666667,
-    "hit_rate_at_5": 1.0,
-    "hit_count_at_3": 29,
-    "hit_count_at_5": 30
+    "top_k": 5,
+    "metric_definition": "Hit@k is true when any normalized reference_context is a substring of a retrieved chunk at rank <= k. MRR@k is the reciprocal rank of the first such match, or zero when none is retrieved.",
+    "hit_count_at_1": 6,
+    "hit_count_at_3": 20,
+    "hit_count_at_5": 21,
+    "hit_rate_at_1": 0.2,
+    "hit_rate_at_3": 0.6666666666666666,
+    "hit_rate_at_5": 0.7,
+    "mrr_at_5": 0.425,
+    "no_exact_reference_match_in_index": 9,
+    "interpretation_note": "No exact reference match in the index is not proof that the source document contains no answer; reference_contexts may be paraphrases."
   },
   "results": [
     {
       "id": 1,
-      "question": "Berapa hari cuti tahunan yang didapatkan karyawan?",
-      "expected_source": "kebijakan_cuti.txt",
-      "retrieved_sources": [
-        "kebijakan_cuti.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Berapa hari cuti tahunan yang diberikan kepada karyawan?",
+      "reference_contexts": [
+        "Perusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa percobaan (probation) selama 3 bulan.",
+        "Cuti Tahunan 12 hari pertahun."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3078477382659912,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.37468206882476807,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.39841383695602417,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.426935076713562,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.4368290901184082,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 2,
-      "question": "Siapa yang berhak mendapatkan cuti tahunan?",
-      "expected_source": "kebijakan_cuti.txt",
-      "retrieved_sources": [
-        "kebijakan_cuti.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_jam_kerja.txt"
+      "question": "Kapan karyawan mulai memenuhi ketentuan untuk mendapatkan fasilitas cuti berbayar?",
+      "reference_contexts": [
+        "Perusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa percobaan (probation) selama 3 bulan."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.28050339221954346,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4110255241394043,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.43413805961608887,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4417176842689514,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.4520348310470581,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 3
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.3333333333333333
     },
     {
       "id": 3,
-      "question": "Kapan cuti harus diajukan sebelum tanggal yang direncanakan?",
-      "expected_source": "kebijakan_cuti.txt",
-      "retrieved_sources": [
-        "kebijakan_cuti.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Berapa hari cuti tahunan yang dapat diakumulasikan ke tahun berikutnya?",
+      "reference_contexts": [
+        "Cuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yang tidak terpakai tidak dapat diuangkan."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.345369815826416,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.39890146255493164,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.43595653772354126,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4677104949951172,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.49554264545440674,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 4,
-      "question": "Di mana karyawan dapat memeriksa sisa cuti tahunan?",
-      "expected_source": "kebijakan_cuti.txt",
-      "retrieved_sources": [
-        "kebijakan_cuti.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Apakah sisa cuti tahunan yang tidak terpakai dapat diuangkan?",
+      "reference_contexts": [
+        "Cuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yang tidak terpakai tidak dapat diuangkan."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.34613144397735596,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.38711053133010864,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.40790677070617676,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4110351800918579,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.4185907244682312,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 5,
-      "question": "Pada hari apa karyawan menjalani jam kerja reguler?",
-      "expected_source": "kebijakan_jam_kerja.txt",
-      "retrieved_sources": [
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Pada hari apa jadwal kerja standar perusahaan berlaku?",
+      "reference_contexts": [
+        "Hari Kerja: Senin hingga Jumat."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3975444436073303,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4226400852203369,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.48872822523117065,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4925549626350403,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5132843255996704,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 6,
-      "question": "Berapa lama waktu istirahat karyawan setiap hari kerja?",
-      "expected_source": "kebijakan_jam_kerja.txt",
-      "retrieved_sources": [
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_remote.txt"
+      "question": "Berapa jam kerja standar perusahaan dalam satu minggu?",
+      "reference_contexts": [
+        "Waktu kerja standar adalah 40 jam dalam seminggu."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.44269776344299316,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.460415244102478,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.5083342790603638,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.5555167198181152,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5600680708885193,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 7,
-      "question": "Bagaimana karyawan mencatat kehadiran?",
-      "expected_source": "kebijakan_jam_kerja.txt",
-      "retrieved_sources": [
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Jam berapa jam kerja inti perusahaan?",
+      "reference_contexts": [
+        "Jam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.494548499584198,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.5058751106262207,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.5831637382507324,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.5873316526412964,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.6112072467803955,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 1
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": true,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 1.0
     },
     {
       "id": 8,
-      "question": "Apa yang harus dilakukan karyawan jika terlambat?",
-      "expected_source": "kebijakan_jam_kerja.txt",
-      "retrieved_sources": [
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Berapa lama waktu istirahat harian dan kapan dapat diambil?",
+      "reference_contexts": [
+        "Waktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.361627459526062,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.38989752531051636,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.46359336376190186,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.483420729637146,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5046025514602661,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 1
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": true,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 1.0
     },
     {
       "id": 9,
-      "question": "Apa itu reimbursement?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Bagaimana karyawan wajib mencatat kehadiran?",
+      "reference_contexts": [
+        "Setiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.40640789270401,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4114189147949219,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4718637466430664,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.47289055585861206,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.47788548469543457,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 10,
-      "question": "Biaya apa saja yang dapat diajukan untuk reimbursement?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt"
+      "question": "Apa konsekuensi jika karyawan terlambat lebih dari 30 menit dari jam kerja inti tanpa memberi tahu manajer?",
+      "reference_contexts": [
+        "Keterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan dicatat sebagai pelanggaran disiplin ringan."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.36492210626602173,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.37715208530426025,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4186273217201233,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.43526172637939453,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 5,
+          "distance": 0.4444040060043335,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 11,
-      "question": "Bukti apa yang wajib dilampirkan saat mengajukan reimbursement?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_jam_kerja.txt"
+      "question": "Berapa hari maksimum karyawan boleh bekerja dari rumah dalam seminggu?",
+      "reference_contexts": [
+        "Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari dalam seminggu, dengan persetujuan manajer langsung."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3697676658630371,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.37316226959228516,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.44783639907836914,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4773341417312622,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5291087627410889,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 12,
-      "question": "Berapa batas waktu pengajuan reimbursement?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_cuti.txt"
+      "question": "Siapa yang harus menyetujui kerja dari rumah?",
+      "reference_contexts": [
+        "Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari dalam seminggu, dengan persetujuan manajer langsung."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.44719916582107544,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.48502349853515625,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4964408874511719,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.5225121974945068,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5233874320983887,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 1
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": true,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 1.0
     },
     {
       "id": 13,
-      "question": "Apa yang terjadi jika pengajuan reimbursement tidak memiliki bukti transaksi?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Berapa nominal tunjangan komunikasi per bulan?",
+      "reference_contexts": [
+        "Subsidi biaya internet dan komunikasi sebesar Rp 350.000,- per bulan yang dibayarkan bersamaan dengan siklus penggajian bulanan."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.4266356825828552,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4365957975387573,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.49449169635772705,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 4,
+          "distance": 0.4972412586212158,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5317921042442322,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 1
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": true,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 1.0
     },
     {
       "id": 14,
-      "question": "Apa yang dimaksud dengan kerja remote dalam kebijakan ini?",
-      "expected_source": "kebijakan_remote.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_cuti.txt"
+      "question": "Kapan tunjangan komunikasi dibayarkan?",
+      "reference_contexts": [
+        "Subsidi biaya internet dan komunikasi sebesar Rp 350.000,- per bulan yang dibayarkan bersamaan dengan siklus penggajian bulanan."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.37051922082901,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4309307932853699,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.46651291847229004,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.5060656070709229,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5122272968292236,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 15,
-      "question": "Apakah karyawan boleh langsung bekerja remote tanpa persetujuan?",
-      "expected_source": "kebijakan_remote.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Berapa anggaran pengembangan diri yang tersedia bagi setiap karyawan per tahun?",
+      "reference_contexts": [
+        "Setiap karyawan mendapatkan dana Rp 2.000.000,- per tahun yang dapat diklaim untuk pembelian buku, kursus online, atau sertifikasi profesional."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3090386390686035,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.33723539113998413,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.37626105546951294,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.41052019596099854,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.42149317264556885,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 16,
-      "question": "Apa kewajiban karyawan saat bekerja remote terkait komunikasi?",
-      "expected_source": "kebijakan_remote.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Pengeluaran apa saja yang dapat diklaim melalui anggaran pengembangan diri?",
+      "reference_contexts": [
+        "Setiap karyawan mendapatkan dana Rp 2.000.000,- per tahun yang dapat diklaim untuk pembelian buku, kursus online, atau sertifikasi profesional."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.43496525287628174,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.45587772130966187,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4612271785736084,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4630928039550781,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 5,
+          "distance": 0.46984726190567017,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 1
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": true,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 1.0
     },
     {
       "id": 17,
-      "question": "Bagaimana karyawan harus menjaga keamanan data saat bekerja remote?",
-      "expected_source": "kebijakan_remote.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Fasilitas asuransi kesehatan apa yang diberikan perusahaan?",
+      "reference_contexts": [
+        "Fasilitas asuransi BPJS Kesehatan dan asuransi swasta tier A yang mencakup rawat inap, rawat jalan, serta perawatan gigi bagi karyawan beserta keluarga inti (suami/istri dan maksimal 3 anak)."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.39032280445098877,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.46447283029556274,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.47567975521087646,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.49814677238464355,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 5,
+          "distance": 0.5373086929321289,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 18,
-      "question": "Perangkat seperti apa yang wajib digunakan untuk mengakses informasi perusahaan?",
-      "expected_source": "kebijakan_remote.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_cuti.txt"
+      "question": "Siapa saja anggota keluarga yang termasuk dalam cakupan asuransi kesehatan?",
+      "reference_contexts": [
+        "Fasilitas asuransi BPJS Kesehatan dan asuransi swasta tier A yang mencakup rawat inap, rawat jalan, serta perawatan gigi bagi karyawan beserta keluarga inti (suami/istri dan maksimal 3 anak)."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.4032348394393921,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4194888472557068,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.45136475563049316,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4925695061683655,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 5,
+          "distance": 0.49967366456985474,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 19,
-      "question": "Apa saja ketentuan utama yang harus dipenuhi untuk mengambil cuti tahunan?",
-      "expected_source": "kebijakan_cuti.txt",
-      "retrieved_sources": [
-        "kebijakan_cuti.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Berapa lama cuti melahirkan yang diberikan kepada karyawan perempuan?",
+      "reference_contexts": [
+        "Cuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh (fully paid maternity leave)."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3228861689567566,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.3831486701965332,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4011990427970886,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4632357358932495,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.4659045338630676,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 20,
-      "question": "Apa saja syarat agar biaya dapat diganti melalui reimbursement?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_cuti.txt"
+      "question": "Berapa hari cuti paternity yang diberikan kepada karyawan laki-laki?",
+      "reference_contexts": [
+        "Cuti Paternity (Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yang melahirkan."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.40437227487564087,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4531705975532532,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4948711395263672,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.5140855312347412,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.5236502885818481,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 21,
-      "question": "Apa yang perlu diperhatikan karyawan ketika bekerja remote agar sesuai kebijakan?",
-      "expected_source": "kebijakan_remote.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Berapa lama cuti menikah yang diberikan perusahaan?",
+      "reference_contexts": [
+        "Cuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secara hukum."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.48274362087249756,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.5492603182792664,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.5950782299041748,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.6030844449996948,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.6078275442123413,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 22,
-      "question": "Bagaimana karyawan memperbaiki kesalahan catatan kehadiran?",
-      "expected_source": "kebijakan_jam_kerja.txt",
-      "retrieved_sources": [
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Kapan surat keterangan dokter wajib dilampirkan untuk cuti sakit?",
+      "reference_contexts": [
+        "Cuti Sakit Sesuai kebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebih dari 2 (dua) hari berturut-turut."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3775452971458435,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.3898836374282837,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4360935091972351,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4368499517440796,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.45573413372039795,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 23,
-      "question": "Apakah nominal tunjangan transportasi disebutkan dalam dokumen?",
-      "expected_source": "kebijakan_tunjangan.txt",
-      "retrieved_sources": [
-        "kebijakan_tunjangan.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Apa yang dilarang terkait data internal perusahaan dan data klien?",
+      "reference_contexts": [
+        "Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan dan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.2802157402038574,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.41939347982406616,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4489634037017822,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.5071865320205688,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 5,
+          "distance": 0.5336134433746338,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 1
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": true,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 1.0
     },
     {
       "id": 24,
-      "question": "Berapa batas maksimum tunjangan komunikasi per bulan?",
-      "expected_source": "kebijakan_tunjangan.txt",
-      "retrieved_sources": [
-        "kebijakan_tunjangan.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_cuti.txt"
+      "question": "Apa aturan perusahaan mengenai perangkat lunak bajakan?",
+      "reference_contexts": [
+        "Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber yang tidak dipercaya pada laptop fasilitas perusahaan."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.4176556468009949,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.42055511474609375,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.43292808532714844,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 4,
+          "distance": 0.4723321199417114,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.47833365201950073,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 25,
-      "question": "Berapa hari cuti tahunan untuk karyawan kontrak yang baru bekerja 6 bulan?",
-      "expected_source": "kebijakan_cuti.txt",
-      "retrieved_sources": [
-        "kebijakan_cuti.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Apa persyaratan keamanan akun kerja yang ditetapkan perusahaan?",
+      "reference_contexts": [
+        "Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti kata sandi utama minimal setiap 90 hari sekali."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3393688201904297,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.401871919631958,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.43158775568008423,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 4,
+          "distance": 0.47924917936325073,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.48549842834472656,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 2
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.5
     },
     {
       "id": 26,
-      "question": "Berapa lama HR harus menyelesaikan pembayaran reimbursement setelah disetujui?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Apa sanksi untuk pelanggaran berat seperti membocorkan data rahasia klien?",
+      "reference_contexts": [
+        "Berat Pemutusan Hubungan Kerja (PHK) Membocorkan data rahasia klien, penggelapan dana, tindakan kriminal di area kantor."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.34211474657058716,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.34995031356811523,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4121856093406677,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4236619472503662,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 5,
+          "distance": 0.46870625019073486,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 27,
-      "question": "Apa sanksi bagi karyawan yang terlambat lebih dari tiga kali?",
-      "expected_source": "kebijakan_jam_kerja.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_tunjangan.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Apakah nominal tunjangan transportasi disebutkan dalam dokumen?",
+      "reference_contexts": [
+        "Bagian fasilitas dan tunjangan dalam dokumen menyebutkan asuransi kesehatan, tunjangan komunikasi, fasilitas perangkat kerja, dan anggaran pengembangan diri; tidak ada ketentuan tunjangan transportasi yang dicantumkan."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.545018196105957,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.5630782842636108,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.5643325448036194,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.5987098217010498,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        },
+        {
+          "rank": 5,
+          "distance": 0.6121197938919067,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {},
+      "reference_contexts_in_index": [],
+      "evidence_status": "no_exact_reference_context_match_in_index",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": false,
+      "mrr_at_5": 0.0
     },
     {
       "id": 28,
-      "question": "Kalau mau izin beberapa hari, kapan dan lewat mana pengajuannya?",
-      "expected_source": "kebijakan_cuti.txt",
-      "retrieved_sources": [
-        "kebijakan_reimbursement.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_cuti.txt"
+      "question": "Melalui sistem apa karyawan harus mengajukan cuti dan berapa hari sebelumnya?",
+      "reference_contexts": [
+        "Perusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa percobaan (probation) selama 3 bulan.",
+        "Cuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yang tidak terpakai tidak dapat diuangkan.",
+        "Setiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal."
       ],
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.3856436014175415,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.4091642498970032,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.4160647988319397,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [
+            3
+          ],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.4217606782913208,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.4449387788772583,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3809,
+          "matched_reference_ids": [],
+          "content": "6. Sanksi Kedisiplinan\nPelanggaran terhadap kebijakan perusahaan akan dikenakan sanksi sesuai dengan tingkat\nkeparahannya, yang diatur dalam tahapan berikut:\nTingkat\nPelanggaran Tindakan Sanksi Contoh Kasus\nRingan Teguran Lisan / SuratPeringatan I (SP 1) Sering terlambat masuk jam inti, tidak mengisi*timesheet*.\nSedang Surat Peringatan II & III (SP2 / SP 3) Absen tanpa kabar (mangkir) selama 2 hari berturut-turut,menyalahgunakan fasilitas.\nBerat Pemutusan Hubungan Kerja(PHK) Membocorkan data rahasia klien, penggelapan dana,tindakan kriminal di area kantor.\nPernyataan Persetujuan\nDengan menerima pekerjaan di PT Inovasi Teknologi Nusantara, karyawan secara otomatis\nmenyetujui dan tunduk pada seluruh ketentuan yang tercantum dalam dokumen kebijakan ini.\nDokumen ini dapat diperbarui sewaktu-waktu oleh pihak Manajemen HR."
+        }
+      ],
+      "reference_context_ranks": {
+        "3": 3,
+        "1": 4
+      },
+      "reference_contexts_in_index": [
+        1,
+        3
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
       "hit_at_3": true,
-      "hit_at_5": true
+      "hit_at_5": true,
+      "mrr_at_5": 0.3333333333333333
     },
     {
       "id": 29,
-      "question": "Kalau saya sudah membeli kebutuhan kerja, apakah pasti akan diganti?",
-      "expected_source": "kebijakan_reimbursement.txt",
-      "retrieved_sources": [
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_reimbursement.txt",
-        "kebijakan_tunjangan.txt"
+      "question": "Berapa hari cuti tahunan khusus untuk karyawan kontrak yang baru bekerja 6 bulan?",
+      "reference_contexts": [
+        "Dokumen Kebijakan Karyawan ini berlaku untuk seluruh karyawan tetap, kontrak, maupun paruh waktu.",
+        "Perusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa percobaan (probation) selama 3 bulan.",
+        "Cuti Tahunan 12 hari pertahun."
       ],
-      "hit_at_3": false,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.30834370851516724,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.3900887370109558,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.39418286085128784,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [
+            2
+          ],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.40403836965560913,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.46429914236068726,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "2": 3
+      },
+      "reference_contexts_in_index": [
+        2
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "hit_at_5": true,
+      "mrr_at_5": 0.3333333333333333
     },
     {
       "id": 30,
-      "question": "Bolehkah saya bekerja remote tetapi tidak merespons pesan tim selama jam kerja?",
-      "expected_source": "kebijakan_remote.txt",
-      "retrieved_sources": [
-        "kebijakan_remote.txt",
-        "kebijakan_jam_kerja.txt",
-        "kebijakan_remote.txt",
-        "kebijakan_cuti.txt",
-        "kebijakan_reimbursement.txt"
+      "question": "Berapa lama waktu yang diberikan HR untuk membayar reimbursement setelah pengajuan disetujui?",
+      "reference_contexts": [
+        "Anggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional."
       ],
-      "hit_at_3": true,
-      "hit_at_5": true
+      "retrieved_contexts": [
+        {
+          "rank": 1,
+          "distance": 0.4210546016693115,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 1363,
+          "matched_reference_ids": [],
+          "content": "3. Cuti dan Izin Ketidakhadiran\nPerusahaan memahami pentingnya keseimbangan kehidupan kerja (work-life balance). Oleh karena itu,\nPerusahaan menyediakan berbagai fasilitas cuti berbayar bagi karyawan yang telah melewati masa\npercobaan (probation) selama 3 bulan.\nJenis Cuti Kuota /Durasi Keterangan Tambahan\nCuti Tahunan 12 hari pertahun Dapat diakumulasi maksimal 5 hari ke tahun berikutnya. Sisa cuti yangtidak terpakai tidak dapat diuangkan.\nCuti Sakit Sesuaikebutuhan Wajib melampirkan surat keterangan dokter jika sakit berlangsung lebihdari 2 (dua) hari berturut-turut.\nCuti Melahirkan 3 bulan Diberikan kepada karyawan perempuan dengan gaji dibayar penuh(fully paid maternity leave).\nCuti Paternity\n(Suami) 5 hari kerja Diberikan kepada karyawan laki-laki untuk mendampingi istri yangmelahirkan.\nCuti Menikah 3 hari kerja Berlaku untuk pernikahan pertama karyawan yang diakui secarahukum.\n"
+        },
+        {
+          "rank": 2,
+          "distance": 0.45626527070999146,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 3110,
+          "matched_reference_ids": [],
+          "content": "5. Kebijakan Keamanan Informasi & IT\nSebagai perusahaan teknologi, keamanan data adalah prioritas utama. Seluruh karyawan terikat pada\nperjanjian Non-Disclosure Agreement (NDA) dan wajib mematuhi protokol keamanan berikut:\nAkses Data: Karyawan dilarang menyalin, mengunduh, atau membagikan data internal perusahaan\ndan data klien ke perangkat pribadi atau penyimpanan cloud eksternal yang tidak sah.\nKeamanan Perangkat: Dilarang menginstal perangkat lunak bajakan (crack) atau aplikasi dari sumber\nyang tidak dipercaya pada laptop fasilitas perusahaan.\nKata Sandi: Wajib mengaktifkan autentikasi dua faktor (2FA) pada seluruh akun kerja dan mengganti\nkata sandi utama minimal setiap 90 hari sekali.\n"
+        },
+        {
+          "rank": 3,
+          "distance": 0.46693354845046997,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 0,
+          "matched_reference_ids": [],
+          "content": "Buku Panduan Karyawan\nPT XYZ Tech | Berlaku mulai: 1 Januari 2026\n1. Pendahuluan\nSelamat datang di PT Inovasi Teknologi Nusantara (selanjutnya disebut \"Perusahaan\"). Dokumen\nKebijakan Karyawan ini disusun untuk memberikan panduan yang jelas mengenai hak, kewajiban, serta\nstandar perilaku profesional yang diharapkan dari setiap karyawan. Kebijakan ini berlaku untuk seluruh\nkaryawan tetap, kontrak, maupun paruh waktu.\n"
+        },
+        {
+          "rank": 4,
+          "distance": 0.48609745502471924,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 2259,
+          "matched_reference_ids": [
+            1
+          ],
+          "content": "4. Fasilitas dan Tunjangan\nSelain gaji pokok, Perusahaan memberikan tunjangan untuk menunjang kesejahteraan dan kelancaran\nkerja karyawan.\nAsuransi Kesehatan\nFasilitas asuransi BPJS Kesehatan dan\nasuransi swasta tier A yang mencakup rawat\ninap, rawat jalan, serta perawatan gigi bagi\nkaryawan beserta keluarga inti (suami/istri dan\nmaksimal 3 anak).\nTunjangan Komunikasi\nSubsidi biaya internet dan komunikasi sebesar\nRp 350.000,- per bulan yang dibayarkan\nbersamaan dengan siklus penggajian bulanan.\nFasilitas Perangkat Kerja\nPeminjaman satu unit laptop spesifikasi\nstandar perusahaan beserta monitor\ntambahan. Kerusakan akibat kelalaian pribadi\nmenjadi tanggung jawab karyawan.\nAnggaran Pengembangan Diri\nSetiap karyawan mendapatkan dana Rp\n2.000.000,- per tahun yang dapat diklaim\nuntuk pembelian buku, kursus online, atau\nsertifikasi profesional.\n\n"
+        },
+        {
+          "rank": 5,
+          "distance": 0.48670434951782227,
+          "source": "Kebijakan Perusahaan - PT XYZ Tech.pdf",
+          "start_index": 420,
+          "matched_reference_ids": [],
+          "content": "2. Kebijakan Waktu Kerja & Kehadiran\nPerusahaan menerapkan sistem kerja yang fleksibel namun tetap mengedepankan produktivitas dan\nkolaborasi tim. Waktu kerja standar adalah 40 jam dalam seminggu, yang diatur dengan ketentuan\nsebagai berikut:\nHari Kerja: Senin hingga Jumat.\nJam Kerja Inti (Core Hours): Pukul 10:00 hingga 15:00 WIB. Seluruh karyawan diwajibkan untuk\nresponsif dan hadir (baik di kantor maupun secara virtual) pada rentang waktu ini.\nWaktu Istirahat: 1 jam per hari, bebas diambil antara pukul 11:30 hingga 13:30 WIB.\nModel Kerja (Hybrid): Karyawan diizinkan bekerja dari rumah (Work From Home) maksimal 2 hari\ndalam seminggu, dengan persetujuan manajer langsung.\nPenting: Pencatatan Kehadiran\nSetiap karyawan wajib melakukan clock-in dan clock-out melalui aplikasi portal HR internal.\nKeterlambatan lebih dari 30 menit dari jam kerja inti tanpa pemberitahuan kepada manajer akan\ndicatat sebagai pelanggaran disiplin ringan.\n\n"
+        }
+      ],
+      "reference_context_ranks": {
+        "1": 4
+      },
+      "reference_contexts_in_index": [
+        1
+      ],
+      "evidence_status": "reference_context_found_in_retrieval",
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "hit_at_5": true,
+      "mrr_at_5": 0.25
     }
   ]
 }

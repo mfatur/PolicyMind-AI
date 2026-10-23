@@ -52,17 +52,13 @@ def generate_answer(question, context):
 
 
 if __name__ == "__main__":
-    question = "Berapa hari sebelumnya karyawan harus mengajukan cuti?"
+    question = "Berapa nominal tunjangan komunikasi?"
 
     context = (
-        "Setiap karyawan tetap yang telah bekerja selama 12 bulan "
-        "berhak mendapatkan cuti tahunan sebanyak 12 hari kerja "
-        "untuk setiap tahun kerja."
+        "Tunjangan komunikasi sebesar Rp350.000 per bulan. "
+        "Anggaran pengembangan diri sebesar Rp2.000.000 per tahun."
     )
 
     answer = generate_answer(question, context)
-
-    print("Pertanyaan:", question)
-    print("\nJawaban PolicyMind AI:")
     print(answer)
     
