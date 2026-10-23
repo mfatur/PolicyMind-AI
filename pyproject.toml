@@ -8,15 +8,21 @@ dependencies = [
     "sentence-transformers",
     "chromadb",
     "groq",
-    "openai==2.54.0",
-    "ragas==0.4.3",
     "python-dotenv",
     "fastapi[standard]",
     "torch==2.14.1+cpu",
     "langfuse",
-    "pytest",
     "pypdf",
+]
+
+[dependency-groups]
+evaluation = [
+    "openai==2.54.0",
+    "ragas==0.4.3",
     "matplotlib",
+]
+dev = [
+    "pytest",
 ]
 
 [[tool.uv.index]]
