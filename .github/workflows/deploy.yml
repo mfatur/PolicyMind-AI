@@ -44,7 +44,13 @@ jobs:
           python-version: "3.11"
 
       - name: Deploy to FastAPI Cloud
-        run: uv run --no-project --with-requirements requirements.txt --index-strategy unsafe-best-match --extra-index-url https://download.pytorch.org/whl/cpu fastapi deploy
+        run: |
+          uv run \
+            --no-project \
+            --with-requirements requirements.txt \
+            --index-strategy unsafe-best-match \
+            --extra-index-url https://download.pytorch.org/whl/cpu \
+            fastapi deploy
         env:
           FASTAPI_CLOUD_TOKEN: ${{ secrets.FASTAPI_CLOUD_TOKEN }}
           FASTAPI_CLOUD_APP_ID: ${{ secrets.FASTAPI_CLOUD_APP_ID }}
