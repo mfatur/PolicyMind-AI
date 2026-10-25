@@ -1,8 +1,11 @@
 import logging
 from contextlib import asynccontextmanager
 
+import gradio as gr
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
+
+from demo import css, demo
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -58,3 +61,12 @@ def ask(request: AskRequest):
             status_code=500,
             detail="Terjadi kesalahan saat memproses pertanyaan.",
         )
+
+
+app = gr.mount_gradio_app(
+    app,
+    demo,
+    path="/",
+    theme=gr.themes.Base(),
+    css=css,
+)

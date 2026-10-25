@@ -13,6 +13,7 @@ dependencies = [
     "torch==2.14.1+cpu",
     "langfuse",
     "pypdf",
+    "gradio",
 ]
 
 [dependency-groups]

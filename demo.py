@@ -1,7 +1,8 @@
-import httpx
+import logging
+
 import gradio as gr
 
-API_URL = "https://policymind-ai.fastapicloud.dev/ask"
+logger = logging.getLogger(__name__)
 
 EXAMPLES = [
     ("▧", "Cuti tahunan", "Berapa hari cuti tahunan karyawan?"),
@@ -19,15 +20,10 @@ def ask_policy(message):
         return "Silakan masukkan pertanyaan terlebih dahulu."
 
     try:
-        response = httpx.post(
-            API_URL,
-            json={"question": question},
-            timeout=60.0,
-        )
-        response.raise_for_status()
-        result = response.json()
+        from app.rag_pipeline import ask_policy as run_policy_query
 
-        answer = result.get("answer", "Belum ada jawaban dari API.")
+        result = run_policy_query(question)
+        answer = result.get("answer", "Belum ada jawaban dari backend.")
         sources = result.get("sources", [])
 
         if sources:
@@ -36,12 +32,9 @@ def ask_policy(message):
 
         return answer
 
-    except httpx.TimeoutException:
-        return "Permintaan terlalu lama. Silakan coba lagi."
-    except httpx.HTTPStatusError as error:
-        return f"API mengembalikan status {error.response.status_code}."
-    except httpx.RequestError:
-        return "Tidak dapat terhubung ke backend PolicyMind AI."
+    except Exception:
+        logger.exception("Gagal memproses pertanyaan dari UI Gradio")
+        return "Terjadi kesalahan saat memproses pertanyaan. Silakan coba lagi."
 
 
 def submit_question(message, history):
@@ -707,7 +700,7 @@ with gr.Blocks(title="PolicyMind AI") as demo:
         gr.HTML(
             """
             <div id="disclaimer">
-                PolicyMind AI can make mistakes. Check important info.
+                Hanya menjawab pertanyaan terkait kebijakan perusahaan.
             </div>
             """
         )
