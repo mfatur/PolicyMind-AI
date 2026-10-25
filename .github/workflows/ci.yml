@@ -23,7 +23,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install project and test dependencies
-        run: uv sync --group dev --group evaluation
+        run: uv sync --group dev --group evaluation --extra ui
 
-      - name: Run chunking unit tests
-        run: uv run pytest app/test_chunking_unit.py -v
+      - name: Run unit tests
+        run: uv run python -m pytest app/test_chunking_unit.py app/test_vector_store_unit.py app/test_demo_unit.py -v

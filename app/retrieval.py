@@ -1,3 +1,4 @@
+import logging
 from pathlib import Path
 
 import chromadb
@@ -7,6 +8,7 @@ from langfuse import observe
 
 DB_DIR = Path(__file__).resolve().parents[1] / "data" / "chroma_db"
 COLLECTION_NAME = "policy_documents"
+logger = logging.getLogger(__name__)
 
 client = chromadb.PersistentClient(path=str(DB_DIR))
 
@@ -36,13 +38,11 @@ def retrieve_documents(question, top_k=3, search_query=None):
             "source": results["metadatas"][0][i]["source"],
             "distance": results["distances"][0][i],
         })
-    print("\n=== KANDIDAT CHROMADB ===")
-    for i, candidate in enumerate(candidates, start=1):
-        print(
-            f"{i}. source={candidate['source']} | "
-            f"distance={candidate['distance']:.4f}"
-        )
-        print(candidate["content"][:200].replace("\n", " "))
+    logger.info(
+        "ChromaDB mengembalikan %d kandidat; memilih top_k=%d.",
+        len(candidates),
+        min(top_k, len(candidates)),
+    )
     if not candidates:
         return []
 
