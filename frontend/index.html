@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ffffff">
+    <title>PolicyMind AI</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand-name">
+          <span>PolicyMind AI</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true">
+            <path d="m3 6 5 5 5-5"></path>
+          </svg>
+        </div>
+        <span class="profile" aria-label="Profil">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="15" fill="#e9e9e9"></circle>
+            <circle cx="16" cy="12" r="5" fill="#555"></circle>
+            <path d="M6 28c1-6 4.7-9 10-9s9 3 10 9" fill="#555"></path>
+          </svg>
+        </span>
+      </header>
+
+      <section class="main-area" aria-label="Percakapan PolicyMind AI">
+        <div class="welcome-block" id="welcome-block">
+          <h1>What can I help with?</h1>
+        </div>
+
+        <section
+          class="conversation"
+          id="conversation"
+          aria-live="polite"
+          aria-label="Riwayat percakapan"
+          hidden
+        ></section>
+
+        <div
+          class="typing-indicator"
+          id="typing-indicator"
+          aria-label="Asisten sedang berpikir"
+          role="status"
+          hidden
+        >
+          <span></span><span></span><span></span>
+        </div>
+
+        <form class="composer" id="question-form">
+          <span class="attachment-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="m20.5 11.5-8.6 8.6a5 5 0 0 1-7.1-7.1l9.2-9.2a3.4 3.4 0 0 1 4.8 4.8l-9.2 9.2a1.8 1.8 0 0 1-2.5-2.5l8.5-8.5"></path>
+            </svg>
+          </span>
+          <label class="visually-hidden" for="question-input">Tanyakan kebijakan</label>
+          <textarea
+            id="question-input"
+            name="question"
+            placeholder="Tanyakan kebijakan"
+            rows="1"
+            maxlength="1000"
+            required
+          ></textarea>
+          <button class="send-button" id="send-button" type="submit" aria-label="Kirim pertanyaan">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 19V5m-6 6 6-6 6 6"></path>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="suggestions" id="suggestions" aria-label="Saran pertanyaan">
+          <button type="button" data-question="Berapa hari cuti tahunan karyawan?">
+            <span aria-hidden="true">▧</span> Cuti tahunan
+          </button>
+          <button type="button" data-question="Berapa hari kerja dari rumah diperbolehkan?">
+            <span aria-hidden="true">◎</span> Kerja dari rumah
+          </button>
+          <button type="button" data-question="Berapa tunjangan komunikasi per bulan?">
+            <span aria-hidden="true">◇</span> Tunjangan
+          </button>
+          <button type="button" data-question="Apa saja klaim pengembangan diri?">
+            <span aria-hidden="true">♧</span> Pengembangan diri
+          </button>
+          <button type="button" data-question="Apa saja kebijakan perusahaan yang tersedia?">
+            <span aria-hidden="true">···</span> Lainnya
+          </button>
+        </nav>
+      </section>
+
+      <p class="disclaimer">
+        Hanya menjawab pertanyaan terkait kebijakan perusahaan.
+      </p>
+    </main>
+  </body>
+</html>

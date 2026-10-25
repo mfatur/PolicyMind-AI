@@ -26,4 +26,4 @@ jobs:
         run: uv sync --group dev --group evaluation --extra ui
 
       - name: Run unit tests
-        run: uv run python -m pytest app/test_chunking_unit.py app/test_vector_store_unit.py app/test_demo_unit.py -v
+        run: uv run python -m pytest app/test_chunking_unit.py app/test_vector_store_unit.py app/test_demo_unit.py app/test_api_cors_unit.py -v
