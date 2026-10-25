@@ -79,6 +79,25 @@ python evaluation/evaluate_ragas.py
 
 Evaluation may make API calls and consume model quota.
 
+## Running the API and Demo UI
+
+Run the backend from the project root:
+
+```bash
+uv run uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+In a separate terminal, install the optional UI dependency and start the Gradio
+demo:
+
+```bash
+uv run --extra ui python demo.py
+```
+
+The UI sends questions to the backend's `/ask` endpoint over HTTP. By default,
+it connects to `http://127.0.0.1:8000`; set `POLICYMIND_API_URL` in the UI
+process environment to use a different backend URL.
+
 ## Project Structure
 
 ```text

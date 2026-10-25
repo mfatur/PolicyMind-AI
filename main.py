@@ -1,11 +1,8 @@
 import logging
 from contextlib import asynccontextmanager
 
-import gradio as gr
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-
-from demo import css, demo
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -13,10 +10,10 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    from app.vector_store import create_vector_store
+    from app.vector_store import ensure_vector_store
 
-    create_vector_store()
-    logger.info("ChromaDB siap digunakan.")
+    ensure_vector_store()
+    logger.info("ChromaDB dan model embedding siap digunakan.")
     yield
 
 
@@ -61,12 +58,3 @@ def ask(request: AskRequest):
             status_code=500,
             detail="Terjadi kesalahan saat memproses pertanyaan.",
         )
-
-
-app = gr.mount_gradio_app(
-    app,
-    demo,
-    path="/",
-    theme=gr.themes.Base(),
-    css=css,
-)

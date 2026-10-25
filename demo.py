@@ -1,8 +1,13 @@
+import json
 import logging
+import os
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 import gradio as gr
 
 logger = logging.getLogger(__name__)
+API_URL = os.getenv("POLICYMIND_API_URL", "http://127.0.0.1:8000").rstrip("/")
 
 EXAMPLES = [
     ("▧", "Cuti tahunan", "Berapa hari cuti tahunan karyawan?"),
@@ -19,12 +24,27 @@ def ask_policy(message):
     if not question:
         return "Silakan masukkan pertanyaan terlebih dahulu."
 
-    try:
-        from app.rag_pipeline import ask_policy as run_policy_query
+    request = Request(
+        f"{API_URL}/ask",
+        data=json.dumps({"question": question}).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
 
-        result = run_policy_query(question)
+    try:
+        with urlopen(request, timeout=60) as response:
+            result = json.loads(response.read().decode("utf-8"))
+        if not isinstance(result, dict):
+            raise ValueError("Respons backend harus berupa objek JSON.")
+
         answer = result.get("answer", "Belum ada jawaban dari backend.")
         sources = result.get("sources", [])
+        if not isinstance(answer, str):
+            raise ValueError("Jawaban backend bukan teks.")
+        if not isinstance(sources, list) or not all(
+            isinstance(source, str) for source in sources
+        ):
+            raise ValueError("Daftar sumber backend tidak valid.")
 
         if sources:
             answer += "\n\n**Sumber dokumen**\n"
@@ -32,8 +52,14 @@ def ask_policy(message):
 
         return answer
 
-    except Exception:
-        logger.exception("Gagal memproses pertanyaan dari UI Gradio")
+    except HTTPError as error:
+        logger.error("Backend /ask mengembalikan HTTP %s.", error.code)
+        return "Backend gagal memproses pertanyaan. Silakan coba lagi."
+    except (URLError, TimeoutError) as error:
+        logger.error("Tidak dapat menghubungi backend pada %s: %s", API_URL, error)
+        return "Backend tidak dapat dihubungi. Pastikan API sedang berjalan."
+    except (json.JSONDecodeError, UnicodeDecodeError, ValueError) as error:
+        logger.exception("Respons backend /ask tidak valid: %s", error)
         return "Terjadi kesalahan saat memproses pertanyaan. Silakan coba lagi."
 
 
