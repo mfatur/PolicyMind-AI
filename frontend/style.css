@@ -33,7 +33,6 @@ textarea {
 }
 
 .app-shell {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -43,7 +42,7 @@ textarea {
   min-height: 560px;
   margin: 4.5vh auto;
   padding: 0 8px 12px;
-  overflow: hidden;
+  overflow: visible;
   border: 1px solid #e7e7e7;
   border-radius: 12px;
   background: #fff;
@@ -252,6 +251,10 @@ textarea {
   padding-left: 20px;
 }
 
+.sources li {
+  overflow-wrap: anywhere;
+}
+
 .typing-indicator {
   display: flex;
   flex: 0 0 24px;
@@ -430,14 +433,13 @@ textarea {
 }
 
 .disclaimer {
-  position: absolute;
-  right: 16px;
-  bottom: -7px;
-  left: 16px;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 8px 8px 0;
   color: #646464;
   font-size: 12px;
+  line-height: 1.4;
   text-align: center;
-  pointer-events: none;
 }
 
 .visually-hidden {
@@ -460,15 +462,22 @@ textarea {
 
 @media (max-width: 700px) {
   .app-shell {
-    position: fixed;
-    top: 8px;
-    left: 8px;
-    width: calc(100vw - 16px);
+    width: calc(100vw - 32px);
     height: calc(100vh - 16px);
     min-height: 0;
-    margin: 0;
-    padding: 0 12px 12px;
+    margin: 8px auto;
+    padding: 0 12px 10px;
     border-radius: 12px;
+  }
+
+  @supports (min-height: 100dvh) {
+    .app-shell {
+      height: calc(100dvh - 16px);
+    }
+  }
+
+  .main-area {
+    padding-bottom: 16px;
   }
 
   .topbar .brand-name {
@@ -495,16 +504,22 @@ textarea {
   }
 
   .conversation-controls {
+    flex-wrap: wrap;
     gap: 4px;
+  }
+
+  .control-feedback {
+    flex: 1 0 100%;
+    text-align: right;
   }
 
   .conversation-controls button {
     padding: 4px 6px;
-    font-size: 10px;
+    font-size: 11px;
   }
 
-  .control-feedback {
-    font-size: 10px;
+  .disclaimer {
+    padding-top: 0;
   }
 }
 
