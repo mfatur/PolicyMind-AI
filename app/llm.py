@@ -5,7 +5,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from groq import Groq
-from langfuse import observe
+from langfuse import observe, get_client
+
+langfuse = get_client()
 
 load_dotenv()
 
@@ -47,7 +49,14 @@ def generate_answer(question, context):
         ],
         temperature=0.1,
     )
-
+    if response.usage:
+        langfuse.update_current_generation(
+            model=MODEL_NAME,
+            usage_details={
+                "input_tokens": response.usage.prompt_tokens,
+                "output_tokens": response.usage.completion_tokens,
+            },
+        )
     return response.choices[0].message.content
 
 
